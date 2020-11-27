@@ -1,5 +1,8 @@
 package quizPBO;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * @author NAMA     : Muhammad Anggawan Ridho Islami
  * KELAS    : IF 10K
@@ -9,6 +12,7 @@ package quizPBO;
 public class Customer extends ServicePrice implements CustomerInvoice {
     String name, email;
     boolean member;
+
 
     public String getName() {
         return name;
@@ -34,5 +38,10 @@ public class Customer extends ServicePrice implements CustomerInvoice {
         this.member = member;
     }
 
-    public String currentTime(){}
+    @Override
+    public String currentTime() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDateTime now = LocalDateTime.now();
+        return dtf.format(now);
+    }
 }
