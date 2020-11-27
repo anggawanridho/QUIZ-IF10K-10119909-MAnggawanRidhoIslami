@@ -5,5 +5,7 @@ public interface ServiceItem {
 
     public float getPrice(int serviceItem){}
 
-    public boolean checkMemberStatus(String statusMember)
+    public boolean checkMemberStatus(String statusMember){}
+
+    public float getSale(boolean isMember, float parServicePrice){}
 }

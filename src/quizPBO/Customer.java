@@ -6,7 +6,7 @@ package quizPBO;
  * NIM      : 10119909
  */
 
-public class Customer implements CustomerInvoice {
+public class Customer extends ServicePrice implements CustomerInvoice {
     String name, email;
     boolean member;
 
